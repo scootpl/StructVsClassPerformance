@@ -16,7 +16,14 @@ class Tests {
                 x = x + IntClass(1)
             }
         }
-        
+
+        measure("final class (1 field)") {
+            var x = IntFinalClass(0)
+            for _ in 1...10000000 {
+                x = x + IntFinalClass(1)
+            }
+        }
+
         measure("struct (1 field)") {
             var x = IntStruct(0)
             for _ in 1...10000000 {

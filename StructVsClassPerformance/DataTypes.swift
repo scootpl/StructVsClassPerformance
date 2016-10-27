@@ -14,6 +14,11 @@ class IntClass {
     init(_ val: Int) { self.value = val }
 }
 
+final class IntFinalClass {
+    var value: Int
+    init(_ val: Int) { self.value = val }
+}
+
 struct IntStruct {
     var value: Int
     init(_ val: Int) { self.value = val }
@@ -21,6 +26,10 @@ struct IntStruct {
 
 func + (x: IntClass, y: IntClass) -> IntClass {
     return IntClass(x.value + y.value)
+}
+
+func + (x: IntFinalClass, y: IntFinalClass) -> IntFinalClass {
+    return IntFinalClass(x.value + y.value)
 }
 
 func + (x: IntStruct, y: IntStruct) -> IntStruct {
