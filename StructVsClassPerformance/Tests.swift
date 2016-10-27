@@ -39,7 +39,7 @@ class Tests {
         }
     }
     
-    static private func measure(name: String, @noescape block: () -> ()) {
+    static fileprivate func measure(_ name: String, block: () -> ()) {
         let t0 = CACurrentMediaTime()
         
         block()
